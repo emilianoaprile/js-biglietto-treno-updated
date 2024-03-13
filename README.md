@@ -12,6 +12,7 @@ Il programma offre le seguenti funzionalità:
 - Pulire tutti i dati con il pulsante "Annulla".
 - Inserendo il nome completo nell'apposito input, ogni prima lettera del nome se viene scritta in minuscolo varrà stampata con le iniziali maiuscole.
 - Sono presenti i seguenti controlli:
+    TODO:
     - Il nome non può avere meno di 3 caratteri
     - La distanza non può essere inferiore a 10 (km)
 
