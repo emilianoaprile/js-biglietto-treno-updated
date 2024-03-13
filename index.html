@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Biglietto del Treno</title>
+</head>
+
+<body>
+    <main>
+        <section class="form_section">
+            <div class="container">
+                <div class="section_title">
+                    <h1>
+                        Calcola il prezzo del biglietto
+                    </h1>
+                </div>
+                <div class="wrapper">
+                    <div class="form_card d-flex justify-center gap">
+                        <div class="form_card-info input-name d-flex flex-column">
+                            <label class="form_label" for="name">Nome Passeggero</label>
+                            <input class="form_input" type="text" name="name" id="name">
+                            <p id="errorName"></p>
+                        </div>
+                        
+                        <div class="form_card-info d-flex flex-column">
+                            <label class="form_label" for="distance">Distanza in km</label>
+                            <input class="form_input" type="text" name="distance" id="distance">
+                        </div>
+
+                        <div class="form_card-info d-flex flex-column">
+                            <label class="form_label" for="age">Fascia d'età</label>
+                            <select class="form_input" name="age" id="age">
+                                <option class="form_input" value="0">Minorenne</option>
+                                <option class="form_input" value="1">Maggiorenne</option>
+                                <option class="form_input" value="2">Over 65</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form_submit d-flex justify-center gap">
+                        <button id="btn-crea" class="btn btn-crea">Crea</button>
+                        <button id="btn-annulla" class="btn btn-annulla">Annulla</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="ticket_section">
+            <div class="container">
+                <div class="section_title">
+                    <h1>
+                        Biglietto del treno
+                    </h1>
+                </div>
+                <div class="wrapper">
+                    <div class="ticket_card d-flex space-btw">
+                        <div>
+                            <h3 class="ticket_info-title">Nome passeggero</h3>
+                            <span class="ticket_info" id="ticket-name"></span>
+                        </div>
+                        <div>
+                            <h3 class="ticket_info-title">offerta</h3>
+                            <span class="ticket_info" id="offer-type"></span>
+                        </div>
+                        <div>
+                            <h3 class="ticket_info-title">carrozza</h3>
+                            <span class="ticket_info" id="wagon-number"></span>
+                        </div>
+                        <div>
+                            <h3 class="ticket_info-title">codice CP</h3>
+                            <span class="ticket_info" id="cp-code"></span>
+                        </div>
+                        <div>
+                            <h3 class="ticket_info-title">Prezzo</h3>
+                            <span class="ticket_info" id="final-price"></span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+    <!-- js -->
+    <script src="./js/app.js"></script>
+</body>
+
+</html>
