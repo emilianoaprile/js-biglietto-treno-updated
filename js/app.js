@@ -22,6 +22,7 @@ const btnAnnullaElement = document.getElementById('btn-annulla')
 
 console.log(btnCreaElement, btnAnnullaElement)
 
+
 // evento crea
 btnCreaElement.addEventListener('click', function () {
     console.log('ho cliccato')
@@ -60,20 +61,29 @@ btnCreaElement.addEventListener('click', function () {
     // controllo valori input
     if (nameInputElement.value === '' || nameInputElement.value.length < 3) {
 
-        console.log('Il nome deve avere almeno 3 caratteri') // TODO controllo input
+        console.log('Il nome deve avere almeno 3 caratteri') 
 
-        // const errorMessageElement = document.getElementById('errorName');
-        // errorMessageElement.innerHTML = 'Il nome deve avere almeno 3 lettere'
+        const errorMessageElement = document.getElementById('errorName');
+        errorMessageElement.innerHTML = 'Il nome deve avere almeno 3 lettere'
 
-        // setTimeout(function() {
-        //     errorMessageElement.style.display = 'none';
-        // }, 4000);
+        setTimeout(function() {
+            errorMessageElement.style.display = 'none';
+        }, 4000);
 
         notDisplayElements()
     }
 
-    if (distanceInputElement.value === '' || distanceInputElement.value < 10) {
-        console.log('La distanza minima è di 10km') // TODO controllo input
+    if (isNaN(distanceInputElement.value) || distanceInputElement.value < 10) {
+        
+        console.log('La distanza minima è di 10km')
+
+        const errorMessageElement = document.getElementById('errorDistance');
+        errorMessageElement.innerHTML = 'La distanza minima è di 10km'
+
+        setTimeout(function() {
+            errorMessageElement.style.display = 'none';
+        }, 4000);
+
         notDisplayElements()
     }
 
